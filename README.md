@@ -2,17 +2,22 @@
 
 Proyecto Web en `Node.js` desarrollado para el Instituto Profesional `Santo Tomás de Valdivia`, diseñado para demostrar los contenidos de la asignatura de `Programación Web`. Este proyecto está desarrollado en `JavaScript`, con el lado del cliente y el lado del servidor utilizando `Node.js`.
 
-En esta versión inicial, el proyecto incluye únicamente el sistema de inicio de sesión (login) y la estructura básica de la aplicación. Implementa el uso de `.env`, un archivo de texto utilizado para definir variables de entorno en aplicaciones de software. Estas variables se utilizan típicamente para configurar aspectos sensibles de la aplicación, como credenciales de bases de datos, claves de API y otras configuraciones específicas del entorno.
+En esta versión, el proyecto agrega una `nueva funcionalidad` que permite ingresar un `nuevo` cliente.<br><br>
+El proyecto implementa el uso de `.env`, un archivo de texto utilizado para definir variables de entorno en aplicaciones de software. Estas variables se utilizan típicamente para configurar aspectos sensibles de la aplicación, como credenciales de bases de datos, claves de API y otras configuraciones específicas del entorno.
 
 También hace uso de `package.json`, un componente esencial en proyectos `Node.js y JavaScript`. Este archivo de configuración proporciona información sobre el proyecto, incluidas las dependencias necesarias para su funcionamiento.
 
 ## Tabla de Contenidos
+-[Lo Nuevo](#lo-nuevo)<br>
+-[Instalación](#instalación)<br>
+-[Iniciar Servidor Web Local de la Aplicación](#iniciar-servidor-web-local-de-la-aplicación)<br>
+-[Crear Primer Usuario](#crear-primer-usuario)<br>
+-[Crear Clientes](#crear-clientes)<br>
+-[Uso](#uso)<br>
 
--[Instalación](#instalación)
--[Iniciar Servidor Web Local de la Aplicación](#iniciar-servidor-web-local-de-la-aplicación)
--[Crear Primer Usuario](#crear-primer-usuario)
--[Crear Clientes](#crear-clientes)
--[Uso](#uso)
+## Lo Nuevo
+
+Incluye la operación de `ingresar` un `nuevo` cliente.
 
 ## Instalación
 
@@ -96,10 +101,7 @@ El `user` y el `password` del nuevo usuario para iniciar sesión se encuentran e
 
 ## Crear Clientes
 
-Antes de agregar un nuevo cliente, debe existe un usuario registrado en `users`.<br><br>
-La plataforma ha modificado la base de datos, agregando una nueva tabla llamada `clientes`. Sin embargo, todavía no se ha desarrollado la lógica para agregar un nuevo cliente desde la interfaz. <br>
-Por lo tanto, en esta versión, los `clientes` deben ser agregados manualmente desde un entorno como`phpMyAdmin`.<br>
-Para hacerlo, seleccione la tabla `clientes` en su base de datos, luego elija el menú `Insertar`, complete los campos necesarios y haga clic en `continuar` para guardar los cambios.
+Ahora se pueden crear `clientes` completando un formulario que se encuentra seleccionando el menú de navegación `Ingresar Clientes` del `backend`.<br><br>
 
 ## Uso
 

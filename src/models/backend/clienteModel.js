@@ -17,7 +17,7 @@ class Cliente {
         try {
             // Ejemplo de consulta SQL para insertar un nuevo cliente
             const query = 'INSERT INTO clientes (id_user_created, id_user_updated, nombres, direccion, correo, telefono, estado) VALUES (?, ?, ?, ?, ?, ?, ?)';
-            const params = [this.nombres, this.direccion, this.correo, this.telefono, this.estado];
+            const params = [this.id_user_created, this.id_user_updated, this.nombres, this.direccion, this.correo, this.telefono, this.estado];
             const resultado = await db.ejecutarQuery(query, params);
             console.log('Cliente agregado correctamente:', resultado);
             return resultado;

@@ -111,13 +111,25 @@ async function guardarEdicion(req, res)
     const respuesta = cliente.editarCliente();
     if (respuesta)
     {
-        req.flash('msg', 'Se ha editado');
         res.status(200).json({ message: `Cliente ${nombres} editado correctamente.` });
     }else{
-        req.flash('msg', 'No se ha podido editar.');
         res.status(404).json({ message: `No se pudo editar el cliente ${nombres}.` });
     }
     
 }
 
-module.exports = { ingresarCliente,  listarClientes, editarCliente, guardarEdicion};
+async function guardarNuevoCliente(req, res)
+{
+    let user = req.session.user;
+    const { nombres, direccion, correo, telefono, estado } = req.body;
+    const cliente = new Cliente(null, user.id, user.id, nombres, direccion, correo, telefono, estado);
+
+    if(cliente.agregarCliente())
+    {
+        res.status(200).json({ message: `Cliente ${nombres} agregado correctamente.` });
+    }else{
+        res.status(404).json({ message: `No se pudo ingresar el cliente ${nombres}.` });
+    }
+}
+
+module.exports = { ingresarCliente,  listarClientes, editarCliente, guardarEdicion, guardarNuevoCliente};
